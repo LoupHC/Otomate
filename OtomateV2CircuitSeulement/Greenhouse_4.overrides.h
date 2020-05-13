@@ -320,6 +320,7 @@ void checkOverrides(){
       motorFailure[x] = false;
     }
 //SAFETY CLOSE-OPENING
+    /*
     if((safetyPositionning > 3600000)&&(!greenhouse.device[x].isLock())){//every hour
       if((greenhouse.rollup[x].incrementCounter() == 0)){
         greenhouse.rollup[x].lockCloseAndWait(greenhouse.rollup[x].rotationDown.value());
@@ -328,7 +329,7 @@ void checkOverrides(){
         greenhouse.rollup[x].lockOpenAndWait(greenhouse.rollup[x].rotationUp.value());
       }
       safetyPositionning = 0;
-    }
+    }*/
   }
 
   for (byte x = 0; x < greenhouse.devices.value(); x++){
